@@ -1,0 +1,12 @@
+services:
+  mongodb-personal:
+    image: mongo:8.0.32
+    container_name: mongodb-personal-8-0-32
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-personal_data:/data/db
+
+volumes:
+  mongodb-personal_data:
+    name: mongodb-personal-8-0-32-data

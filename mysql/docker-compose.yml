@@ -1,0 +1,17 @@
+services:
+  mysql-personal:
+    image: mysql:8.4.11
+    container_name: mysql-personal-8-4-11
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass
+      MYSQL_DATABASE: mysql_personal
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    volumes:
+      - mysql-personal_data:/var/lib/mysql
+
+volumes:
+  mysql-personal_data:
+    name: mysql-personal-8-4-11-data
